@@ -1,0 +1,11 @@
+# .gitignore
+# ignore these files/directories when using git
+
+build
+build2
+devlog.txt
+todo.txt
+.vs
+.vscode
+.VSCodeCounter
+CMakeSettings.json
