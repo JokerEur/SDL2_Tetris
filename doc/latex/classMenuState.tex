@@ -1,0 +1,132 @@
+\hypertarget{classMenuState}{}\doxysection{Класс Menu\+State}
+\label{classMenuState}\index{MenuState@{MenuState}}
+Граф наследования\+:Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMenuState}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMenuState_a60939d4cc11f835ec77d3abcfd3d95b8}\label{classMenuState_a60939d4cc11f835ec77d3abcfd3d95b8}} 
+{\bfseries Menu\+State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+void \mbox{\hyperlink{classMenuState_a1b92920fcbe0812a45cfc2d4f5ce37a3}{initialize}} () override
+\item 
+void \mbox{\hyperlink{classMenuState_a28865bcbf689423e6928510da24e14bd}{exit}} () override
+\item 
+void \mbox{\hyperlink{classMenuState_ab8c1216646e09a69f559e85f89d9feb5}{run}} () override
+\item 
+void \mbox{\hyperlink{classMenuState_a97112c5ce679c35ed37e476187b5e60f}{update}} () override
+\item 
+void \mbox{\hyperlink{classMenuState_ab44f907bb34b5e88cfd1591fa786efe8}{draw}} () override
+\item 
+\mbox{\Hypertarget{classMenuState_a567dfdf6aab6993483521a43c0bba8d6}\label{classMenuState_a567dfdf6aab6993483521a43c0bba8d6}} 
+void {\bfseries add\+Button} (\mbox{\hyperlink{classButton}{Button}} $\ast$button)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a69f379eb415817ff5b9021b9b02c49c5}\label{classState_a69f379eb415817ff5b9021b9b02c49c5}} 
+{\bfseries State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+\mbox{\Hypertarget{classState_aca85c78edd5c9c1e528596b9a170bcf6}\label{classState_aca85c78edd5c9c1e528596b9a170bcf6}} 
+virtual void {\bfseries initialize} ()=0
+\item 
+\mbox{\Hypertarget{classState_a9cd211326a31e139de1dbeacb01ef188}\label{classState_a9cd211326a31e139de1dbeacb01ef188}} 
+virtual void {\bfseries exit} ()=0
+\item 
+\mbox{\Hypertarget{classState_a52100b1159fda58336244ece3c45c3cc}\label{classState_a52100b1159fda58336244ece3c45c3cc}} 
+virtual void {\bfseries run} ()=0
+\item 
+\mbox{\Hypertarget{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}\label{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}} 
+virtual void {\bfseries update} ()=0
+\item 
+\mbox{\Hypertarget{classState_ae261605bc40b7e3959ce5df5457e4942}\label{classState_ae261605bc40b7e3959ce5df5457e4942}} 
+virtual void {\bfseries draw} ()=0
+\item 
+\mbox{\Hypertarget{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}\label{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}} 
+void {\bfseries pop\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game)
+\item 
+\mbox{\Hypertarget{classState_af9171d7a2e611e1450bd764903fa8ba1}\label{classState_af9171d7a2e611e1450bd764903fa8ba1}} 
+void {\bfseries push\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\item 
+\mbox{\Hypertarget{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}\label{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}} 
+void {\bfseries change\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+\doxysubsubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8d4344de6d997b9b11deb0028d58faa}\label{classState_ae8d4344de6d997b9b11deb0028d58faa}} 
+State\+ID {\bfseries next\+State\+ID}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a130579441f8d4414b6b854e3d76d6e62}\label{classState_a130579441f8d4414b6b854e3d76d6e62}} 
+\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$ {\bfseries m\+Input\+Manager}
+\item 
+\mbox{\Hypertarget{classState_a29e1a6e244b54e38e6ed6e5911add362}\label{classState_a29e1a6e244b54e38e6ed6e5911add362}} 
+\mbox{\hyperlink{classRenderer}{Renderer}} $\ast$ {\bfseries m\+Renderer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classMenuState_ab44f907bb34b5e88cfd1591fa786efe8}\label{classMenuState_ab44f907bb34b5e88cfd1591fa786efe8}} 
+\index{MenuState@{MenuState}!draw@{draw}}
+\index{draw@{draw}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Menu\+State\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMenuState_a28865bcbf689423e6928510da24e14bd}\label{classMenuState_a28865bcbf689423e6928510da24e14bd}} 
+\index{MenuState@{MenuState}!exit@{exit}}
+\index{exit@{exit}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Menu\+State\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMenuState_a1b92920fcbe0812a45cfc2d4f5ce37a3}\label{classMenuState_a1b92920fcbe0812a45cfc2d4f5ce37a3}} 
+\index{MenuState@{MenuState}!initialize@{initialize}}
+\index{initialize@{initialize}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Menu\+State\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMenuState_ab8c1216646e09a69f559e85f89d9feb5}\label{classMenuState_ab8c1216646e09a69f559e85f89d9feb5}} 
+\index{MenuState@{MenuState}!run@{run}}
+\index{run@{run}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Menu\+State\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classMenuState_a97112c5ce679c35ed37e476187b5e60f}\label{classMenuState_a97112c5ce679c35ed37e476187b5e60f}} 
+\index{MenuState@{MenuState}!update@{update}}
+\index{update@{update}!MenuState@{MenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Menu\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+menustate.\+hpp\item 
+menustate.\+cpp\end{DoxyCompactItemize}

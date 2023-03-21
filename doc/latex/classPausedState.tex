@@ -1,0 +1,129 @@
+\hypertarget{classPausedState}{}\doxysection{Класс Paused\+State}
+\label{classPausedState}\index{PausedState@{PausedState}}
+Граф наследования\+:Paused\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPausedState}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPausedState_ac1a455733d7764a2044d6f86fafe3a60}\label{classPausedState_ac1a455733d7764a2044d6f86fafe3a60}} 
+{\bfseries Paused\+State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+void \mbox{\hyperlink{classPausedState_a88d63f5cedce4d7e24d3269f1221335f}{initialize}} () override
+\item 
+void \mbox{\hyperlink{classPausedState_ad76947b8294564be69c5dd998efe57bf}{exit}} () override
+\item 
+void \mbox{\hyperlink{classPausedState_a07a6a4920f4c05055516feba365c635e}{run}} () override
+\item 
+void \mbox{\hyperlink{classPausedState_a9fe6612a34ba084d20c7a778e3bc5656}{update}} () override
+\item 
+void \mbox{\hyperlink{classPausedState_a03019e80f9b460c6fc00cdcdfd07ce55}{draw}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a69f379eb415817ff5b9021b9b02c49c5}\label{classState_a69f379eb415817ff5b9021b9b02c49c5}} 
+{\bfseries State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+\mbox{\Hypertarget{classState_aca85c78edd5c9c1e528596b9a170bcf6}\label{classState_aca85c78edd5c9c1e528596b9a170bcf6}} 
+virtual void {\bfseries initialize} ()=0
+\item 
+\mbox{\Hypertarget{classState_a9cd211326a31e139de1dbeacb01ef188}\label{classState_a9cd211326a31e139de1dbeacb01ef188}} 
+virtual void {\bfseries exit} ()=0
+\item 
+\mbox{\Hypertarget{classState_a52100b1159fda58336244ece3c45c3cc}\label{classState_a52100b1159fda58336244ece3c45c3cc}} 
+virtual void {\bfseries run} ()=0
+\item 
+\mbox{\Hypertarget{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}\label{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}} 
+virtual void {\bfseries update} ()=0
+\item 
+\mbox{\Hypertarget{classState_ae261605bc40b7e3959ce5df5457e4942}\label{classState_ae261605bc40b7e3959ce5df5457e4942}} 
+virtual void {\bfseries draw} ()=0
+\item 
+\mbox{\Hypertarget{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}\label{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}} 
+void {\bfseries pop\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game)
+\item 
+\mbox{\Hypertarget{classState_af9171d7a2e611e1450bd764903fa8ba1}\label{classState_af9171d7a2e611e1450bd764903fa8ba1}} 
+void {\bfseries push\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\item 
+\mbox{\Hypertarget{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}\label{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}} 
+void {\bfseries change\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+\doxysubsubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8d4344de6d997b9b11deb0028d58faa}\label{classState_ae8d4344de6d997b9b11deb0028d58faa}} 
+State\+ID {\bfseries next\+State\+ID}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a130579441f8d4414b6b854e3d76d6e62}\label{classState_a130579441f8d4414b6b854e3d76d6e62}} 
+\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$ {\bfseries m\+Input\+Manager}
+\item 
+\mbox{\Hypertarget{classState_a29e1a6e244b54e38e6ed6e5911add362}\label{classState_a29e1a6e244b54e38e6ed6e5911add362}} 
+\mbox{\hyperlink{classRenderer}{Renderer}} $\ast$ {\bfseries m\+Renderer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classPausedState_a03019e80f9b460c6fc00cdcdfd07ce55}\label{classPausedState_a03019e80f9b460c6fc00cdcdfd07ce55}} 
+\index{PausedState@{PausedState}!draw@{draw}}
+\index{draw@{draw}!PausedState@{PausedState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Paused\+State\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classPausedState_ad76947b8294564be69c5dd998efe57bf}\label{classPausedState_ad76947b8294564be69c5dd998efe57bf}} 
+\index{PausedState@{PausedState}!exit@{exit}}
+\index{exit@{exit}!PausedState@{PausedState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Paused\+State\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classPausedState_a88d63f5cedce4d7e24d3269f1221335f}\label{classPausedState_a88d63f5cedce4d7e24d3269f1221335f}} 
+\index{PausedState@{PausedState}!initialize@{initialize}}
+\index{initialize@{initialize}!PausedState@{PausedState}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Paused\+State\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classPausedState_a07a6a4920f4c05055516feba365c635e}\label{classPausedState_a07a6a4920f4c05055516feba365c635e}} 
+\index{PausedState@{PausedState}!run@{run}}
+\index{run@{run}!PausedState@{PausedState}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Paused\+State\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classPausedState_a9fe6612a34ba084d20c7a778e3bc5656}\label{classPausedState_a9fe6612a34ba084d20c7a778e3bc5656}} 
+\index{PausedState@{PausedState}!update@{update}}
+\index{update@{update}!PausedState@{PausedState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Paused\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+pausedstate.\+hpp\item 
+pausedstate.\+cpp\end{DoxyCompactItemize}

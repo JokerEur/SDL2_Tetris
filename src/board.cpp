@@ -17,19 +17,40 @@ Board::Board ()
     }
 }
 
-// Get the type of tetromino placed in that block
+/**
+ * @brief Позволяет получить тип тетрамино, помещенный в этом блоке
+ * 
+ * @param r строка 
+ * @param c колонка
+ * @return int 
+ */
 int Board::getTetromino (int r, int c)
 {
     return int(board_state[r][c])-1;
 }
 
-// True if a block is unoccupied
+
+/**
+ * @brief Возвращает истину, если блок не занят 
+ * 
+ * @param r строка 
+ * @param c колонка
+ * @return true 
+ * @return false 
+ */
 bool Board::isBlockFree (int r, int c)
 {
     return (board_state[r][c] == BlockStatus::block_empty) ? true : false;
 }
 
-// True if a certain move is possible
+
+/**
+ * @brief Возвращает истину, если возможно некое перемещение
+ * 
+ * @param p тетрамино
+ * @return true 
+ * @return false 
+ */
 bool Board::isPositionLegal (Piece p)
 {
     for (int row = p.r; row < p.r+config::matrix_blocks; row++)
@@ -60,7 +81,11 @@ bool Board::isPositionLegal (Piece p)
     return true;
 }
 
-// Stores a piece in the board
+/**
+ * @brief Сохранить тетрамино на поле
+ * 
+ * @param p тетрамино
+ */
 void Board::storePiece (Piece p)
 {
     for (int row = p.r; row < p.r+config::matrix_blocks; row++)
@@ -76,7 +101,11 @@ void Board::storePiece (Piece p)
     pieces.push_back(p);
 }
 
-// Clears filled lines
+
+/**
+ * @brief Очищает заполниную линию 
+ * 
+ */
 void Board::clearFullLines()
 {
     for (int row = 0; row < config::playfield_height; row++)
@@ -96,7 +125,12 @@ void Board::clearFullLines()
     }
 }
 
-// True if the game has ended; Note: the row index starts from the top
+/**
+ * @brief Возвращает истину, если игра закончилась
+ * 
+ * @return true 
+ * @return false 
+ */
 bool Board::isGameOver ()
 {
     bool game_over = false;
@@ -117,7 +151,11 @@ bool Board::isGameOver ()
  * ====================================
  */
 
-// Clears a filled row and moves all other blocks properly
+/**
+ * @brief Очищает заполненую сторочку и передаигает все блоки дальше
+ * 
+ * @param r 
+ */
 void Board::deleteLine (int r)
 {
     for (int row = r; row > 0; row--)

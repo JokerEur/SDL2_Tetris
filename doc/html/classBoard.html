@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tetris: Класс Board</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Tetris<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classBoard-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Board</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a453e66c9bae56b1b8064571b46d1dc14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a453e66c9bae56b1b8064571b46d1dc14">getTetromino</a> (int r, int c)</td></tr>
+<tr class="memdesc:a453e66c9bae56b1b8064571b46d1dc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позволяет получить тип тетрамино, помещенный в этом блоке  <br /></td></tr>
+<tr class="separator:a453e66c9bae56b1b8064571b46d1dc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad569a71a478ced5fecb0ece5b8d53d72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ad569a71a478ced5fecb0ece5b8d53d72">isBlockFree</a> (int r, int c)</td></tr>
+<tr class="memdesc:ad569a71a478ced5fecb0ece5b8d53d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает истину, если блок не занят  <br /></td></tr>
+<tr class="separator:ad569a71a478ced5fecb0ece5b8d53d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2e664a8bc2319a7a04d71bf176bc4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a8e2e664a8bc2319a7a04d71bf176bc4c">isPositionLegal</a> (<a class="el" href="structPiece.html">Piece</a> p)</td></tr>
+<tr class="memdesc:a8e2e664a8bc2319a7a04d71bf176bc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает истину, если возможно некое перемещение  <br /></td></tr>
+<tr class="separator:a8e2e664a8bc2319a7a04d71bf176bc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7c48962a7bfaa977bd8ef9ca2b83ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a2f7c48962a7bfaa977bd8ef9ca2b83ba">storePiece</a> (<a class="el" href="structPiece.html">Piece</a> p)</td></tr>
+<tr class="memdesc:a2f7c48962a7bfaa977bd8ef9ca2b83ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранить тетрамино на поле  <br /></td></tr>
+<tr class="separator:a2f7c48962a7bfaa977bd8ef9ca2b83ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4d9ad725a1759e10053fcbcdd4fa59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#aee4d9ad725a1759e10053fcbcdd4fa59">clearFullLines</a> ()</td></tr>
+<tr class="memdesc:aee4d9ad725a1759e10053fcbcdd4fa59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очищает заполниную линию  <br /></td></tr>
+<tr class="separator:aee4d9ad725a1759e10053fcbcdd4fa59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad04aee7600346ff1cc0fac63b6549c75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ad04aee7600346ff1cc0fac63b6549c75">isGameOver</a> ()</td></tr>
+<tr class="memdesc:ad04aee7600346ff1cc0fac63b6549c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает истину, если игра закончилась  <br /></td></tr>
+<tr class="separator:ad04aee7600346ff1cc0fac63b6549c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Методы</h2>
+<a id="aee4d9ad725a1759e10053fcbcdd4fa59" name="aee4d9ad725a1759e10053fcbcdd4fa59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4d9ad725a1759e10053fcbcdd4fa59">&#9670;&#160;</a></span>clearFullLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::clearFullLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очищает заполниную линию </p>
+
+</div>
+</div>
+<a id="a453e66c9bae56b1b8064571b46d1dc14" name="a453e66c9bae56b1b8064571b46d1dc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a453e66c9bae56b1b8064571b46d1dc14">&#9670;&#160;</a></span>getTetromino()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Board::getTetromino </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Позволяет получить тип тетрамино, помещенный в этом блоке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>строка </td></tr>
+    <tr><td class="paramname">c</td><td>колонка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ad569a71a478ced5fecb0ece5b8d53d72" name="ad569a71a478ced5fecb0ece5b8d53d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad569a71a478ced5fecb0ece5b8d53d72">&#9670;&#160;</a></span>isBlockFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isBlockFree </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает истину, если блок не занят </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>строка </td></tr>
+    <tr><td class="paramname">c</td><td>колонка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="ad04aee7600346ff1cc0fac63b6549c75" name="ad04aee7600346ff1cc0fac63b6549c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04aee7600346ff1cc0fac63b6549c75">&#9670;&#160;</a></span>isGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isGameOver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает истину, если игра закончилась </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a8e2e664a8bc2319a7a04d71bf176bc4c" name="a8e2e664a8bc2319a7a04d71bf176bc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2e664a8bc2319a7a04d71bf176bc4c">&#9670;&#160;</a></span>isPositionLegal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::isPositionLegal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPiece.html">Piece</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает истину, если возможно некое перемещение </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>тетрамино </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a2f7c48962a7bfaa977bd8ef9ca2b83ba" name="a2f7c48962a7bfaa977bd8ef9ca2b83ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7c48962a7bfaa977bd8ef9ca2b83ba">&#9670;&#160;</a></span>storePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::storePiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPiece.html">Piece</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохранить тетрамино на поле </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>тетрамино </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="board_8hpp_source.html">board.hpp</a></li>
+<li>board.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

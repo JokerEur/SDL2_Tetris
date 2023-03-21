@@ -1,0 +1,36 @@
+\hypertarget{board_8hpp_source}{}\doxysection{board.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOARD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOARD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}config.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}piece.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Represents\ the\ board\ of\ a\ Tetris\ game}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoard}{Board}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Basic\ enumeration\ to\ hold\ all\ different\ types\ of\ blocks\ on\ the\ board}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum}\ BlockStatus\ :\ \textcolor{keywordtype}{int}\ \{block\_empty,\ i\_block,\ o\_block,\ t\_block,\ s\_block,\ z\_block,\ j\_block,\ l\_block\};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board}}\ ();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBoard_a453e66c9bae56b1b8064571b46d1dc14}{getTetromino}}\ (\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c);\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_ad569a71a478ced5fecb0ece5b8d53d72}{isBlockFree}}\ (\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c);\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_a8e2e664a8bc2319a7a04d71bf176bc4c}{isPositionLegal}}\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoard_a2f7c48962a7bfaa977bd8ef9ca2b83ba}{storePiece}}\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoard_aee4d9ad725a1759e10053fcbcdd4fa59}{clearFullLines}}\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_ad04aee7600346ff1cc0fac63b6549c75}{isGameOver}}\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ BlockStatus\ board\_state\ [config::playfield\_height][config::playfield\_width];}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<Piece>\ pieces;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteLine\ (\textcolor{keywordtype}{int}\ y);\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARD\_HPP}}
+
+\end{DoxyCode}

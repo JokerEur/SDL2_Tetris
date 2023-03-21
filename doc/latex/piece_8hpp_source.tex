@@ -1,0 +1,27 @@
+\hypertarget{piece_8hpp_source}{}\doxysection{piece.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PIECE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PIECE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Struct\ to\ hold\ a\ Tetris\ piece}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPiece}{Piece}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ (\textcolor{keywordtype}{int}\ p\_piece\_type,\ \textcolor{keywordtype}{int}\ p\_rotation);\ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ a\ piece\ with\ these\ values}}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structPiece}{Piece}}\ \&p);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ getBlockType\ (\textcolor{keywordtype}{int}\ r\_offset,\ \textcolor{keywordtype}{int}\ c\_offset);\ \ \textcolor{comment}{//\ Returns\ the\ block\ type\ for\ a\ certain\ piece,\ rotation,\ and\ position}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ getInitialOffsetR\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ initial\ position\ offset\ for\ the\ row}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ getInitialOffsetC\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ initial\ position\ offset\ for\ the\ column}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ piece\_type;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Type\ of\ tetromino}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ rotation;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ One\ of\ four\ possible\ rotations}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ r;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Row\ index}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ c;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Column\ index}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PIECE\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,129 @@
+\hypertarget{classGameState}{}\doxysection{Класс Game\+State}
+\label{classGameState}\index{GameState@{GameState}}
+Граф наследования\+:Game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGameState}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameState_a036d46dfaaf06f81ba700461d37f97af}\label{classGameState_a036d46dfaaf06f81ba700461d37f97af}} 
+{\bfseries Game\+State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+void \mbox{\hyperlink{classGameState_a2a8a6338e7f4a33a76015af39f87468a}{initialize}} () override
+\item 
+void \mbox{\hyperlink{classGameState_a874d43f0db56eb2ad7ac79a8178d1ca4}{exit}} () override
+\item 
+void \mbox{\hyperlink{classGameState_ad025ed03190169f2b9bb5360fa6f274d}{run}} () override
+\item 
+void \mbox{\hyperlink{classGameState_a3610da76344c5c2cbcc5921f877226dc}{update}} () override
+\item 
+void \mbox{\hyperlink{classGameState_ad3a574e8d22aa60b9580ae2d0640bfcc}{draw}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a69f379eb415817ff5b9021b9b02c49c5}\label{classState_a69f379eb415817ff5b9021b9b02c49c5}} 
+{\bfseries State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+\mbox{\Hypertarget{classState_aca85c78edd5c9c1e528596b9a170bcf6}\label{classState_aca85c78edd5c9c1e528596b9a170bcf6}} 
+virtual void {\bfseries initialize} ()=0
+\item 
+\mbox{\Hypertarget{classState_a9cd211326a31e139de1dbeacb01ef188}\label{classState_a9cd211326a31e139de1dbeacb01ef188}} 
+virtual void {\bfseries exit} ()=0
+\item 
+\mbox{\Hypertarget{classState_a52100b1159fda58336244ece3c45c3cc}\label{classState_a52100b1159fda58336244ece3c45c3cc}} 
+virtual void {\bfseries run} ()=0
+\item 
+\mbox{\Hypertarget{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}\label{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}} 
+virtual void {\bfseries update} ()=0
+\item 
+\mbox{\Hypertarget{classState_ae261605bc40b7e3959ce5df5457e4942}\label{classState_ae261605bc40b7e3959ce5df5457e4942}} 
+virtual void {\bfseries draw} ()=0
+\item 
+\mbox{\Hypertarget{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}\label{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}} 
+void {\bfseries pop\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game)
+\item 
+\mbox{\Hypertarget{classState_af9171d7a2e611e1450bd764903fa8ba1}\label{classState_af9171d7a2e611e1450bd764903fa8ba1}} 
+void {\bfseries push\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\item 
+\mbox{\Hypertarget{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}\label{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}} 
+void {\bfseries change\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+\doxysubsubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8d4344de6d997b9b11deb0028d58faa}\label{classState_ae8d4344de6d997b9b11deb0028d58faa}} 
+State\+ID {\bfseries next\+State\+ID}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a130579441f8d4414b6b854e3d76d6e62}\label{classState_a130579441f8d4414b6b854e3d76d6e62}} 
+\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$ {\bfseries m\+Input\+Manager}
+\item 
+\mbox{\Hypertarget{classState_a29e1a6e244b54e38e6ed6e5911add362}\label{classState_a29e1a6e244b54e38e6ed6e5911add362}} 
+\mbox{\hyperlink{classRenderer}{Renderer}} $\ast$ {\bfseries m\+Renderer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classGameState_ad3a574e8d22aa60b9580ae2d0640bfcc}\label{classGameState_ad3a574e8d22aa60b9580ae2d0640bfcc}} 
+\index{GameState@{GameState}!draw@{draw}}
+\index{draw@{draw}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+State\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classGameState_a874d43f0db56eb2ad7ac79a8178d1ca4}\label{classGameState_a874d43f0db56eb2ad7ac79a8178d1ca4}} 
+\index{GameState@{GameState}!exit@{exit}}
+\index{exit@{exit}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Game\+State\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classGameState_a2a8a6338e7f4a33a76015af39f87468a}\label{classGameState_a2a8a6338e7f4a33a76015af39f87468a}} 
+\index{GameState@{GameState}!initialize@{initialize}}
+\index{initialize@{initialize}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Game\+State\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classGameState_ad025ed03190169f2b9bb5360fa6f274d}\label{classGameState_ad025ed03190169f2b9bb5360fa6f274d}} 
+\index{GameState@{GameState}!run@{run}}
+\index{run@{run}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+State\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classGameState_a3610da76344c5c2cbcc5921f877226dc}\label{classGameState_a3610da76344c5c2cbcc5921f877226dc}} 
+\index{GameState@{GameState}!update@{update}}
+\index{update@{update}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+gamestate.\+hpp\item 
+gamestate.\+cpp\end{DoxyCompactItemize}

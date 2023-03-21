@@ -14,7 +14,10 @@ InputManager::InputManager ()
     action = Action::stay_idle;
 }
 
-// Clears all events in the event queue
+/**
+ * @brief Удаляет все события из очереди событий
+ * 
+ */
 void InputManager::clearEventQueue ()
 {
     SDL_Event event;
@@ -34,7 +37,12 @@ bool InputManager::isGameExiting ()
     return quit_game;
 }
 
-// Polls from keyboard and gets the corresponding action; Returns false if all actions have been polled
+/**
+ * @brief Функция отвечающая за обработку событий 
+ * 
+ * @return true 
+ * @return false 
+ */
 bool InputManager::pollAction ()
 {
     SDL_Event event;

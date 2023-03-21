@@ -1,0 +1,56 @@
+\hypertarget{config_8hpp_source}{}\doxysection{config.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONFIG\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONFIG\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }config}
+\DoxyCodeLine{00007\ \{\ \ \ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Window\ title}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ window\_title[]\ =\ \textcolor{stringliteral}{"{}Pixeltetris"{}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Logical\ resolution\ of\ the\ game.\ Most\ constants\ are\ in\ respect\ to\ these\ two\ values,}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ so\ do\ not\ change\ them\ unless\ you\ know\ what\ you're\ doing}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ logical\_window\_width\ =\ 640;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ logical\_window\_height\ =\ 360;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ resolution\_scaling;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ scaling\ of\ the\ logical\ resolution;\ 1\ means\ 360p,\ 2\ means\ 720p\ etc.}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ available\_resolution\_scalings[];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Resolution\ scalings\ available\ in\ the\ options}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ starting\_resolution\_scaling\_index\ =\ 4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ index\ of\ the\ starting\ resolution\ scaling\ in\ the\ available\_resolution\_scalings\ array}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ possible\_resolution\_scalings\ =\ 6;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ available\ resolution\ scalings}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Board\ class}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ width\_to\_playfield\ =\ 242;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ pixels}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ height\_to\_playfield\ =\ 34;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ pixels}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ block\_size\ =\ 16;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ pixels}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ playfield\_width\ =\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ blocks}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ true\_playfield\_height\ =\ 20;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ in\ blocks}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ playfield\_height\ =\ 22;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ playfield+2\ rows\ directly\ above\ it\ for\ spawning\ the\ Tetrominos}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ frame\_width\ =\ 6;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Frame\ that\ surrounds\ the\ playfield;\ in\ pixels}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ frame\_sprite\_size\ =\ 8;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Size\ of\ each\ sprite\ clip\ for\ the\ playfield\ frame}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ board\_height\ =\ 2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ distance\ from\ botton\ where\ the\ playfield\ begins;\ in\ pixels}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ matrix\_blocks\ =\ 5;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ matrix\ that\ holds\ tetromino\ info;\ in\ blocks}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ GameState\ class}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ next\_box\_x\ =\ 405;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Horizontal\ distance\ from\ top\ left\ corner;\ in\ pixels}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ next\_box\_y\ =\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Horizontal\ distance\ from\ top\ left\ corner;\ in\ pixels}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ hold\_box\_x\ =\ 150;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Horizontal\ distance\ from\ top\ left\ corner;\ in\ pixels}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ hold\_box\_y\ =\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vertical\ distance\ from\ top\ left\ corner;\ in\ pixels}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Constants\ relating\ to\ Tetris}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ wait\_time\ =\ 1000;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time\ in\ milliseconds}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ ghost\_piece\_enabled;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enables\ or\ disables\ the\ ghost\ piece\ to\ reduce\ misdrops}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Visuals}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ SDL\_Color\ default\_text\_color\ =\ \{0x00,\ 0x00,\ 0x00,\ 0xFF\};\ \ \textcolor{comment}{//\ Default\ color\ for\ all\ text}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ Uint8\ background\_r\_light\ =\ 0xF9;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Background\ color\ for\ light\ mode}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ Uint8\ background\_g\_light\ =\ 0xE6;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{const}\ Uint8\ background\_b\_light\ =\ 0xCF;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ Uint8\ transparency\_alpha\ =\ 100;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ alpha\ for\ transparency\ (with\ 255\ being\ no\ transparency)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONFIG\_HPP}}
+
+\end{DoxyCode}

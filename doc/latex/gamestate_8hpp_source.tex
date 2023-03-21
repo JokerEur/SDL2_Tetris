@@ -1,0 +1,66 @@
+\hypertarget{gamestate_8hpp_source}{}\doxysection{gamestate.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAMESTATE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMESTATE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}board.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}inputmanager.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}piece.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}renderer.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}state.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}texture.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ The\ state\ used\ when\ playing\ a\ Tetris\ game}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameState}{GameState}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classGameState}{GameState}}\ (\mbox{\hyperlink{classInputManager}{InputManager}}\ *manager);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classGameState}{\string~GameState}}\ ();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ exit()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ run()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ update()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ draw()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Simple\ enumeration\ to\ signify\ whether\ the\ game\ is\ starting,\ in\ its\ main\ phase,\ or\ has\ finished}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{enum}\ GamePhase\ \{GAME\_STARTED,\ GAME\_PLAYING,\ GAME\_FINISHED\};}
+\DoxyCodeLine{00027\ \ \ \ \ GamePhase\ currentPhase;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board}}\ *board;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ currentPiece\ \{0,\ 0\};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ nextPiece\ \{0,\ 0\};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ holdPiece\ \{0,\ 0\};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structPiece}{Piece}}\ ghostPiece\ \{0,\ 0\};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ hold\_block\_first\_time;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ hold\ block\ hasn't\ been\ used\ yet}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ hold\_block\_used;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ hold\ block\ has\ been\ used,\ resets\ after\ a\ block\ is\ placed}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ game\_just\_started;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ game\ has\ just\ started\ or\ resumed\ from\ pause}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ time\_snap1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Used\ with\ time\_snap2\ to\ determine\ when\ to\ drop\ the\ Tetromino}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ time\_snap2;}
+\DoxyCodeLine{00039\ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *countdown\_texture;}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *gameover\_text;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *tetrominoSprites;}
+\DoxyCodeLine{00043\ \ \ \ \ SDL\_Rect\ tetrominoSpriteClips[7];}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *playfieldFrame;}
+\DoxyCodeLine{00045\ \ \ \ \ SDL\_Rect\ playfieldFrameClips[4];}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGameOver\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ game\ has\ ended}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ createNewPiece();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ checkState\ ();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deletes\ filled\ lines\ and\ creates\ a\ new\ block.}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ handleEvent\ (Action\ action);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ input}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ movePieceDown\ ();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ drawBoard\ ();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ drawCurrentPiece\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ drawNextPiece\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ drawHoldPiece\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ drawGhostPiece\ (\mbox{\hyperlink{structPiece}{Piece}}\ p);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ getRandom\ (\textcolor{keywordtype}{int}\ lower\_limit,\ \textcolor{keywordtype}{int}\ upper\_limit);\ \ \ \textcolor{comment}{//\ Return\ a\ random\ number\ in\ this\ range}}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMESTATE\_HPP}}
+
+\end{DoxyCode}

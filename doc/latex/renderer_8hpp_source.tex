@@ -1,0 +1,33 @@
+\hypertarget{renderer_8hpp_source}{}\doxysection{renderer.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RENDERER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RENDERER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}texture.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTexture}{Texture}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRenderer}{Renderer}}}
+\DoxyCodeLine{00014\ \{\ \ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize\ (SDL\_Window\ *window);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classRenderer}{\string~Renderer}}\ ();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ clearScreen\ ();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ renderTexture\ (\mbox{\hyperlink{classTexture}{Texture}}\ *texture,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ updateScreen\ ();}
+\DoxyCodeLine{00022\ \ \ \ \ SDL\_Renderer\ *mSDLRenderer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ TTF\_Font\ *mediumFont;}
+\DoxyCodeLine{00025\ \ \ \ \ TTF\_Font\ *bigFont;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RENDERER\_HPP}}
+
+\end{DoxyCode}

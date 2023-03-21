@@ -1,0 +1,129 @@
+\hypertarget{classOptionsState}{}\doxysection{Класс Options\+State}
+\label{classOptionsState}\index{OptionsState@{OptionsState}}
+Граф наследования\+:Options\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classOptionsState}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptionsState_a9e18e4ffc9f5f11b39e478152643fac5}\label{classOptionsState_a9e18e4ffc9f5f11b39e478152643fac5}} 
+{\bfseries Options\+State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$inputmanager)
+\item 
+void \mbox{\hyperlink{classOptionsState_a7d0f580a4ffb22278dc9261a93232f8a}{initialize}} () override
+\item 
+void \mbox{\hyperlink{classOptionsState_a8b927b80a2aed5f9caae427eb3534609}{exit}} () override
+\item 
+void \mbox{\hyperlink{classOptionsState_a7cff36699a01162ce52385bd87f210b4}{run}} () override
+\item 
+void \mbox{\hyperlink{classOptionsState_a1da924a98c2c86eb480563b8a4a84c8a}{update}} () override
+\item 
+void \mbox{\hyperlink{classOptionsState_a222201a8abc7bcf6ae50a9deba09691f}{draw}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a69f379eb415817ff5b9021b9b02c49c5}\label{classState_a69f379eb415817ff5b9021b9b02c49c5}} 
+{\bfseries State} (\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$manager)
+\item 
+\mbox{\Hypertarget{classState_aca85c78edd5c9c1e528596b9a170bcf6}\label{classState_aca85c78edd5c9c1e528596b9a170bcf6}} 
+virtual void {\bfseries initialize} ()=0
+\item 
+\mbox{\Hypertarget{classState_a9cd211326a31e139de1dbeacb01ef188}\label{classState_a9cd211326a31e139de1dbeacb01ef188}} 
+virtual void {\bfseries exit} ()=0
+\item 
+\mbox{\Hypertarget{classState_a52100b1159fda58336244ece3c45c3cc}\label{classState_a52100b1159fda58336244ece3c45c3cc}} 
+virtual void {\bfseries run} ()=0
+\item 
+\mbox{\Hypertarget{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}\label{classState_a06315e7e44aadfa576cbf7e6c1c7d87f}} 
+virtual void {\bfseries update} ()=0
+\item 
+\mbox{\Hypertarget{classState_ae261605bc40b7e3959ce5df5457e4942}\label{classState_ae261605bc40b7e3959ce5df5457e4942}} 
+virtual void {\bfseries draw} ()=0
+\item 
+\mbox{\Hypertarget{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}\label{classState_abd7fc4554b38be77bd7f1c3b69fc7d78}} 
+void {\bfseries pop\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game)
+\item 
+\mbox{\Hypertarget{classState_af9171d7a2e611e1450bd764903fa8ba1}\label{classState_af9171d7a2e611e1450bd764903fa8ba1}} 
+void {\bfseries push\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\item 
+\mbox{\Hypertarget{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}\label{classState_a719ccbcbbb0d3da03d966e9798fa2a7c}} 
+void {\bfseries change\+State} (\mbox{\hyperlink{classGame}{Game}} $\ast$game, \mbox{\hyperlink{classState}{State}} $\ast$state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+\doxysubsubsection*{Открытые атрибуты унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_ae8d4344de6d997b9b11deb0028d58faa}\label{classState_ae8d4344de6d997b9b11deb0028d58faa}} 
+State\+ID {\bfseries next\+State\+ID}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные данные унаследованные от \mbox{\hyperlink{classState}{State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classState_a130579441f8d4414b6b854e3d76d6e62}\label{classState_a130579441f8d4414b6b854e3d76d6e62}} 
+\mbox{\hyperlink{classInputManager}{Input\+Manager}} $\ast$ {\bfseries m\+Input\+Manager}
+\item 
+\mbox{\Hypertarget{classState_a29e1a6e244b54e38e6ed6e5911add362}\label{classState_a29e1a6e244b54e38e6ed6e5911add362}} 
+\mbox{\hyperlink{classRenderer}{Renderer}} $\ast$ {\bfseries m\+Renderer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classOptionsState_a222201a8abc7bcf6ae50a9deba09691f}\label{classOptionsState_a222201a8abc7bcf6ae50a9deba09691f}} 
+\index{OptionsState@{OptionsState}!draw@{draw}}
+\index{draw@{draw}!OptionsState@{OptionsState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Options\+State\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classOptionsState_a8b927b80a2aed5f9caae427eb3534609}\label{classOptionsState_a8b927b80a2aed5f9caae427eb3534609}} 
+\index{OptionsState@{OptionsState}!exit@{exit}}
+\index{exit@{exit}!OptionsState@{OptionsState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Options\+State\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classOptionsState_a7d0f580a4ffb22278dc9261a93232f8a}\label{classOptionsState_a7d0f580a4ffb22278dc9261a93232f8a}} 
+\index{OptionsState@{OptionsState}!initialize@{initialize}}
+\index{initialize@{initialize}!OptionsState@{OptionsState}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Options\+State\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classOptionsState_a7cff36699a01162ce52385bd87f210b4}\label{classOptionsState_a7cff36699a01162ce52385bd87f210b4}} 
+\index{OptionsState@{OptionsState}!run@{run}}
+\index{run@{run}!OptionsState@{OptionsState}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Options\+State\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+\mbox{\Hypertarget{classOptionsState_a1da924a98c2c86eb480563b8a4a84c8a}\label{classOptionsState_a1da924a98c2c86eb480563b8a4a84c8a}} 
+\index{OptionsState@{OptionsState}!update@{update}}
+\index{update@{update}!OptionsState@{OptionsState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Options\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classState}{State}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+optionsstate.\+hpp\item 
+optionsstate.\+cpp\end{DoxyCompactItemize}

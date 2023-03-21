@@ -1,0 +1,48 @@
+\hypertarget{optionsstate_8hpp_source}{}\doxysection{optionsstate.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OPTIONSSTATE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OPTIONSSTATE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}button.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}inputmanager.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}state.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOptionsState}{OptionsState}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Enumeration\ used\ when\ change\ a\ setting}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{enum\ class}\ SettingChange\ \{left,\ right\};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classOptionsState}{OptionsState}}\ (\mbox{\hyperlink{classInputManager}{InputManager}}\ *inputmanager);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classOptionsState}{\string~OptionsState}}\ ();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ exit\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ run\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ update\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ draw\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}\ *OKButton;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *title\_text;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *resolution\_setting\_text;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *resolution\_text;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *left\_arrow;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *right\_arrow;}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *ghost\_block\_setting\_text;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *texture\_on\_on;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *texture\_on\_off;}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *texture\_off\_on;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *texture\_off\_off;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ index;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ resolution\_scaling\_index;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ index\ of\ the\ resolution\ scaling\ in\ the\ config::available\_resolution\_scalings\ array}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ changeResolution\ (SettingChange\ s);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ changeGhostBlock\ (SettingChange\ s);}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OPTIONSSTATE\_HPP}}
+
+\end{DoxyCode}

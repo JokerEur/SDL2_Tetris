@@ -1,0 +1,37 @@
+\hypertarget{menustate_8hpp_source}{}\doxysection{menustate.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MENUSTATE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MENUSTATE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}button.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}inputmanager.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}renderer.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}state.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ The\ main\ menu\ of\ the\ game;\ It\ is\ the\ state\ shown\ when\ the\ game\ starts}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMenuState}{MenuState}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classState}{State}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classMenuState}{MenuState}}\ (\mbox{\hyperlink{classInputManager}{InputManager}}\ *manager);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classMenuState}{\string~MenuState}}\ ();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ exit\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ run\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ update\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ draw\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ addButton\ (\mbox{\hyperlink{classButton}{Button}}\ *button);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<Button*>\ mButtons;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ *title\_text;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ index;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shows\ the\ current\ button\ selected}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENUSTATE\_HPP}}
+
+\end{DoxyCode}

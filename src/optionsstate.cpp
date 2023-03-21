@@ -206,7 +206,11 @@ void OptionsState::draw ()
  * ====================================
  */
 
-// Change the resolution by changing the scaling
+/**
+ * @brief Изменяет разрешение путём изменения скейла
+ * 
+ * @param s 
+ */
 void OptionsState::changeResolution (SettingChange s)
 {
     if (s == SettingChange::left && resolution_scaling_index > 0)

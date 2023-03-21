@@ -2,7 +2,12 @@
 
 #include "piece.hpp"
 
-// Simple function to swap two pieces
+/**
+ * @brief Функция для смены двух разных блоков 
+ * 
+ * @param a 
+ * @param b 
+ */
 void swap(Piece &a, Piece &b)
 {
     Piece temp = a;

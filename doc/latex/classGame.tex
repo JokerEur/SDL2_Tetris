@@ -1,0 +1,173 @@
+\hypertarget{classGame}{}\doxysection{Класс Game}
+\label{classGame}\index{Game@{Game}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classGame_afa220e533b80333d5b3c8dbba01fdd16}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Функция вызывается для инициализации всех компонентов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a9726dd4085951bdeae5666ccde07e6e9}\label{classGame_a9726dd4085951bdeae5666ccde07e6e9}} 
+void {\bfseries exit} ()
+\item 
+void \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}} ()
+\begin{DoxyCompactList}\small\item\em Основной цикл всей программы \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a4b33dd67adef59bebadba8a234282c88}{pop\+State}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет текущее состояние \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a1507c58904eb1f2f88b78f833efab143}{push\+State}} (\mbox{\hyperlink{classState}{State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Толкает новое состояние в начало \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ac71060e5c10b1d8972c5da8132d8b085}{change\+State}} (\mbox{\hyperlink{classState}{State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Удаляет текущее состояние и заменяет его на другое \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_afe2c44b23e27a6de20ad50ca4f16941e}\label{classGame_afe2c44b23e27a6de20ad50ca4f16941e}} 
+bool {\bfseries is\+Game\+Exiting} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a19798a4f4c50037e1c5cd8c5d491fef9}\label{classGame_a19798a4f4c50037e1c5cd8c5d491fef9}} 
+static \mbox{\hyperlink{classGame}{Game}} $\ast$ {\bfseries get\+Instance} ()
+\item 
+static void \mbox{\hyperlink{classGame_a26721e9dd32ef9bf4e6ff58679d355bc}{push\+Options}} ()
+\begin{DoxyCompactList}\small\item\em Добавляет опции в начало \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classGame_aa77173bbcb5b74635bcb1266dcf01522}{push\+New\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Добавляет новое игровое состояние в начало \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classGame_a5119c49db1055c560ba5bf622d6dce11}{push\+Paused}} ()
+\begin{DoxyCompactList}\small\item\em Добавляет мену паузы в начало \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classGame_ae8118ebc79d0dbd5d5aafd825674d873}{go\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Вовращается назад на одно состояние, удаляя его с начала \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classGame_a84ea6a43b549f9b19903e18682be395c}{go\+Double\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет первые два состояния \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a49d40be989e1b4931c6faa49913443c6}\label{classGame_a49d40be989e1b4931c6faa49913443c6}} 
+\mbox{\hyperlink{classRenderer}{Renderer}} $\ast$ {\bfseries m\+Renderer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a6a871e6dda9dfeda92b0b951f3f0ff3a}\label{classGame_a6a871e6dda9dfeda92b0b951f3f0ff3a}} 
+class {\bfseries Options\+State}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classGame_ac71060e5c10b1d8972c5da8132d8b085}\label{classGame_ac71060e5c10b1d8972c5da8132d8b085}} 
+\index{Game@{Game}!changeState@{changeState}}
+\index{changeState@{changeState}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
+{\footnotesize\ttfamily void Game\+::change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classState}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Удаляет текущее состояние и заменяет его на другое 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em state} & состояние \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_ae8118ebc79d0dbd5d5aafd825674d873}\label{classGame_ae8118ebc79d0dbd5d5aafd825674d873}} 
+\index{Game@{Game}!goBack@{goBack}}
+\index{goBack@{goBack}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{goBack()}{goBack()}}
+{\footnotesize\ttfamily void Game\+::go\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вовращается назад на одно состояние, удаляя его с начала 
+
+\mbox{\Hypertarget{classGame_a84ea6a43b549f9b19903e18682be395c}\label{classGame_a84ea6a43b549f9b19903e18682be395c}} 
+\index{Game@{Game}!goDoubleBack@{goDoubleBack}}
+\index{goDoubleBack@{goDoubleBack}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{goDoubleBack()}{goDoubleBack()}}
+{\footnotesize\ttfamily void Game\+::go\+Double\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Удаляет первые два состояния 
+
+\mbox{\Hypertarget{classGame_afa220e533b80333d5b3c8dbba01fdd16}\label{classGame_afa220e533b80333d5b3c8dbba01fdd16}} 
+\index{Game@{Game}!initialize@{initialize}}
+\index{initialize@{initialize}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool Game\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция вызывается для инициализации всех компонентов 
+
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a4b33dd67adef59bebadba8a234282c88}\label{classGame_a4b33dd67adef59bebadba8a234282c88}} 
+\index{Game@{Game}!popState@{popState}}
+\index{popState@{popState}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{popState()}{popState()}}
+{\footnotesize\ttfamily void Game\+::pop\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаляет текущее состояние 
+
+\mbox{\Hypertarget{classGame_aa77173bbcb5b74635bcb1266dcf01522}\label{classGame_aa77173bbcb5b74635bcb1266dcf01522}} 
+\index{Game@{Game}!pushNewGame@{pushNewGame}}
+\index{pushNewGame@{pushNewGame}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{pushNewGame()}{pushNewGame()}}
+{\footnotesize\ttfamily void Game\+::push\+New\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Добавляет новое игровое состояние в начало 
+
+\mbox{\Hypertarget{classGame_a26721e9dd32ef9bf4e6ff58679d355bc}\label{classGame_a26721e9dd32ef9bf4e6ff58679d355bc}} 
+\index{Game@{Game}!pushOptions@{pushOptions}}
+\index{pushOptions@{pushOptions}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{pushOptions()}{pushOptions()}}
+{\footnotesize\ttfamily void Game\+::push\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Добавляет опции в начало 
+
+\mbox{\Hypertarget{classGame_a5119c49db1055c560ba5bf622d6dce11}\label{classGame_a5119c49db1055c560ba5bf622d6dce11}} 
+\index{Game@{Game}!pushPaused@{pushPaused}}
+\index{pushPaused@{pushPaused}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{pushPaused()}{pushPaused()}}
+{\footnotesize\ttfamily void Game\+::push\+Paused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Добавляет мену паузы в начало 
+
+\mbox{\Hypertarget{classGame_a1507c58904eb1f2f88b78f833efab143}\label{classGame_a1507c58904eb1f2f88b78f833efab143}} 
+\index{Game@{Game}!pushState@{pushState}}
+\index{pushState@{pushState}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{pushState()}{pushState()}}
+{\footnotesize\ttfamily void Game\+::push\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classState}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Толкает новое состояние в начало 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em state} & состояние \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}} 
+\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Основной цикл всей программы 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+game.\+hpp\item 
+game.\+cpp\end{DoxyCompactItemize}

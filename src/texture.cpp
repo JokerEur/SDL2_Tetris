@@ -34,7 +34,13 @@ void Texture::free()
     }
 }
 
-// Creates texture from an image path
+/**
+ * @brief Создаёт текстуры из изображения
+ * 
+ * @param path путь к изображению
+ * @return true 
+ * @return false 
+ */
 bool Texture::loadFromImage (std::string path) 
 {
     bool success = true;
@@ -56,7 +62,15 @@ bool Texture::loadFromImage (std::string path)
     return success;
 }
 
-// Creates texture from string with a certain color
+/**
+ * @brief Создаёт текстуру из строки и определённым цветом
+ * 
+ * @param text текст
+ * @param font шрифт
+ * @param text_color цевет
+ * @return true 
+ * @return false 
+ */
 bool Texture::loadFromText (std::string text, TTF_Font *font, SDL_Color text_color)
 {
     bool success = true;
@@ -85,7 +99,13 @@ bool Texture::loadFromText (std::string text, TTF_Font *font, SDL_Color text_col
     return success;
 }
 
-// Renders texture with top left corner at x, y
+/**
+ * @brief Отрисовывает текстуру в верхнем левом углу в X и Y
+ * 
+ * @param x 
+ * @param y 
+ * @param clip 
+ */
 void Texture::render (int x, int y, SDL_Rect *clip)
 {
     SDL_Rect r = {x, y, width, height};
@@ -97,14 +117,23 @@ void Texture::render (int x, int y, SDL_Rect *clip)
     SDL_RenderCopy(Game::getInstance()->mRenderer->mSDLRenderer, mTexture, clip, &r);
 }
 
-// Renders texture centered at x, y
+/**
+ * @brief Отрисовывает отценотованную текстуру по X и Y
+ * 
+ * @param x 
+ * @param y 
+ */
 void Texture::renderCentered (int x, int y)
 {
     SDL_Rect r = {x-(width/2), y-(height/2), width, height};
     SDL_RenderCopy(Game::getInstance()->mRenderer->mSDLRenderer, mTexture, nullptr, &r);
 }
 
-// Sets transparency
+/**
+ * @brief Устанавливает прозрачность
+ * 
+ * @param alpha 
+ */
 void Texture::setAlphaMode (Uint8 alpha)
 {
     SDL_SetTextureAlphaMod (mTexture, alpha);

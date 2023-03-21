@@ -1,0 +1,62 @@
+\hypertarget{game_8hpp_source}{}\doxysection{game.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}inputmanager.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}renderer.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}state.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classState}{State}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameState}{GameState}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMenuState}{MenuState}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOptionsState}{OptionsState}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPausedState}{PausedState}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Utilizes\ the\ "{}Singleton\ pattern"{}\ to\ ensure\ there\ can\ only\ be\ one\ game}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGame}{Game}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOptionsState}{OptionsState}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Options\ can\ change\ the\ window\ size\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classGame}{Game}}*\ getInstance();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGame_afa220e533b80333d5b3c8dbba01fdd16}{initialize}}\ ();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ exit\ ();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}\ ();}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a4b33dd67adef59bebadba8a234282c88}{popState}}\ ();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a1507c58904eb1f2f88b78f833efab143}{pushState}}\ (\mbox{\hyperlink{classState}{State}}\ *s);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_ac71060e5c10b1d8972c5da8132d8b085}{changeState}}\ (\mbox{\hyperlink{classState}{State}}\ *s);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a26721e9dd32ef9bf4e6ff58679d355bc}{pushOptions}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_aa77173bbcb5b74635bcb1266dcf01522}{pushNewGame}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a5119c49db1055c560ba5bf622d6dce11}{pushPaused}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_ae8118ebc79d0dbd5d5aafd825674d873}{goBack}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a84ea6a43b549f9b19903e18682be395c}{goDoubleBack}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGameExiting();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classRenderer}{Renderer}}\ *mRenderer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ renderer\ used\ for\ all\ things\ rendering}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classGame}{Game}}\ *mInstance;}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classGame}{Game}}();}
+\DoxyCodeLine{00047\ \ \ \ \ SDL\_Window\ *mWindow;}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classInputManager}{InputManager}}\ *mManager;}
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<State*>\ mStates;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classGameState}{GameState}}\ *mPlayState;}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classMenuState}{MenuState}}\ *mMainMenuState;}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classOptionsState}{OptionsState}}\ *mOptionsState;}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classPausedState}{PausedState}}\ *mPausedState;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_HPP}}
+
+\end{DoxyCode}

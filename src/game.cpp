@@ -29,7 +29,12 @@ Game *Game::getInstance()
     return mInstance;
 }
 
-// The function called to initialize everything; Pushes the main menu state to the front
+/**
+ * @brief Функция вызывается для инициализации всех компонентов
+ * 
+ * @return true 
+ * @return false 
+ */
 bool Game::initialize()
 {
     bool success = true;
@@ -97,7 +102,10 @@ void Game::exit ()
     SDL_Quit();
 }
 
-// Main loop of the entire program. Gets the current state and simply runs it
+/**
+ * @brief Основной цикл всей программы
+ * 
+ */
 void Game::run ()
 {
     if (!mStates.empty())
@@ -106,26 +114,41 @@ void Game::run ()
     }
 }
 
-// Deletes the current state
+/**
+ * @brief Удаляет текущее состояние
+ * 
+ */
 void Game::popState ()
 {
     mStates.pop_back();
 }
 
-// Pushes a new state to the front
+/**
+ * @brief Толкает новое состояние в начало
+ * 
+ * @param state состояние
+ */
 void Game::pushState (State *state)
 {
     mStates.push_back(state);
 }
 
 // Deletes the current state and replaces it with a different one
+/**
+ * @brief Удаляет текущее состояние и заменяет его на другое 
+ * 
+ * @param state состояние
+ */
 void Game::changeState (State *state)
 {
     popState();
     pushState(state);
 }
 
-// Pushes a new gamestate state to the front
+/**
+ * @brief Добавляет новое игровое состояние в начало 
+ * 
+ */
 void Game::pushNewGame ()
 {
     delete Game::getInstance()->mPlayState;
@@ -134,7 +157,10 @@ void Game::pushNewGame ()
     Game:getInstance()->pushState(Game::getInstance()->mPlayState);
 }
 
-// Pushes the options to the front
+/**
+ * @brief Добавляет опции в начало 
+ * 
+ */
 void Game::pushOptions ()
 {
     delete Game::getInstance()->mOptionsState;
@@ -143,7 +169,10 @@ void Game::pushOptions ()
     Game::getInstance()->pushState(Game::getInstance()->mOptionsState);
 }
 
-// Pushes the pause menu to the front
+/**
+ * @brief Добавляет мену паузы в начало
+ * 
+ */
 void Game::pushPaused ()
 {
     delete Game::getInstance()->mPausedState;
@@ -153,13 +182,19 @@ void Game::pushPaused ()
 
 }
 
-// Goes back one state (by popping the state in the front)
+/**
+ * @brief  Вовращается назад на одно состояние, удаляя его с начала
+ * 
+ */
 void Game::goBack ()
 {
     Game::getInstance()->popState();
 }
 
-// Pops the first 2 states
+/**
+ * @brief Удаляет первые два состояния 
+ * 
+ */
 void Game::goDoubleBack ()
 {
     Game::getInstance()->popState();

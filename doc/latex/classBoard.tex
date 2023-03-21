@@ -1,0 +1,128 @@
+\hypertarget{classBoard}{}\doxysection{Класс Board}
+\label{classBoard}\index{Board@{Board}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBoard_a453e66c9bae56b1b8064571b46d1dc14}{get\+Tetromino}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Позволяет получить тип тетрамино, помещенный в этом блоке \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBoard_ad569a71a478ced5fecb0ece5b8d53d72}{is\+Block\+Free}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Возвращает истину, если блок не занят \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBoard_a8e2e664a8bc2319a7a04d71bf176bc4c}{is\+Position\+Legal}} (\mbox{\hyperlink{structPiece}{Piece}} p)
+\begin{DoxyCompactList}\small\item\em Возвращает истину, если возможно некое перемещение \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_a2f7c48962a7bfaa977bd8ef9ca2b83ba}{store\+Piece}} (\mbox{\hyperlink{structPiece}{Piece}} p)
+\begin{DoxyCompactList}\small\item\em Сохранить тетрамино на поле \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_aee4d9ad725a1759e10053fcbcdd4fa59}{clear\+Full\+Lines}} ()
+\begin{DoxyCompactList}\small\item\em Очищает заполниную линию \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBoard_ad04aee7600346ff1cc0fac63b6549c75}{is\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает истину, если игра закончилась \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classBoard_aee4d9ad725a1759e10053fcbcdd4fa59}\label{classBoard_aee4d9ad725a1759e10053fcbcdd4fa59}} 
+\index{Board@{Board}!clearFullLines@{clearFullLines}}
+\index{clearFullLines@{clearFullLines}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{clearFullLines()}{clearFullLines()}}
+{\footnotesize\ttfamily void Board\+::clear\+Full\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Очищает заполниную линию 
+
+\mbox{\Hypertarget{classBoard_a453e66c9bae56b1b8064571b46d1dc14}\label{classBoard_a453e66c9bae56b1b8064571b46d1dc14}} 
+\index{Board@{Board}!getTetromino@{getTetromino}}
+\index{getTetromino@{getTetromino}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getTetromino()}{getTetromino()}}
+{\footnotesize\ttfamily int Board\+::get\+Tetromino (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Позволяет получить тип тетрамино, помещенный в этом блоке 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em r} & строка \\
+\hline
+{\em c} & колонка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_ad569a71a478ced5fecb0ece5b8d53d72}\label{classBoard_ad569a71a478ced5fecb0ece5b8d53d72}} 
+\index{Board@{Board}!isBlockFree@{isBlockFree}}
+\index{isBlockFree@{isBlockFree}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isBlockFree()}{isBlockFree()}}
+{\footnotesize\ttfamily bool Board\+::is\+Block\+Free (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Возвращает истину, если блок не занят 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em r} & строка \\
+\hline
+{\em c} & колонка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_ad04aee7600346ff1cc0fac63b6549c75}\label{classBoard_ad04aee7600346ff1cc0fac63b6549c75}} 
+\index{Board@{Board}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool Board\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает истину, если игра закончилась 
+
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a8e2e664a8bc2319a7a04d71bf176bc4c}\label{classBoard_a8e2e664a8bc2319a7a04d71bf176bc4c}} 
+\index{Board@{Board}!isPositionLegal@{isPositionLegal}}
+\index{isPositionLegal@{isPositionLegal}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isPositionLegal()}{isPositionLegal()}}
+{\footnotesize\ttfamily bool Board\+::is\+Position\+Legal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPiece}{Piece}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Возвращает истину, если возможно некое перемещение 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & тетрамино \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a2f7c48962a7bfaa977bd8ef9ca2b83ba}\label{classBoard_a2f7c48962a7bfaa977bd8ef9ca2b83ba}} 
+\index{Board@{Board}!storePiece@{storePiece}}
+\index{storePiece@{storePiece}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{storePiece()}{storePiece()}}
+{\footnotesize\ttfamily void Board\+::store\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPiece}{Piece}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Сохранить тетрамино на поле 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & тетрамино \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+board.\+hpp\item 
+board.\+cpp\end{DoxyCompactItemize}

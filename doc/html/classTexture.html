@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tetris: Класс Texture</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Tetris<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classTexture-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Texture</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a46d06aec832e5a954f1c8ca957c2c6e5"><td class="memItemLeft" align="right" valign="top"><a id="a46d06aec832e5a954f1c8ca957c2c6e5" name="a46d06aec832e5a954f1c8ca957c2c6e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>free</b> ()</td></tr>
+<tr class="separator:a46d06aec832e5a954f1c8ca957c2c6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7577e82b287f14db49283185507fd647"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexture.html#a7577e82b287f14db49283185507fd647">loadFromImage</a> (std::string path)</td></tr>
+<tr class="memdesc:a7577e82b287f14db49283185507fd647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт текстуры из изображения  <br /></td></tr>
+<tr class="separator:a7577e82b287f14db49283185507fd647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b06a1fcaa471230d3df936be13b9142"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexture.html#a8b06a1fcaa471230d3df936be13b9142">loadFromText</a> (std::string text, TTF_Font *font, SDL_Color text_color)</td></tr>
+<tr class="memdesc:a8b06a1fcaa471230d3df936be13b9142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт текстуру из строки и определённым цветом  <br /></td></tr>
+<tr class="separator:a8b06a1fcaa471230d3df936be13b9142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fce38d162049942280eb1fee9292063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexture.html#a2fce38d162049942280eb1fee9292063">render</a> (int x, int y, SDL_Rect *clip=nullptr)</td></tr>
+<tr class="memdesc:a2fce38d162049942280eb1fee9292063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовывает текстуру в верхнем левом углу в X и Y.  <br /></td></tr>
+<tr class="separator:a2fce38d162049942280eb1fee9292063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a23c32bd173e0fe124a77e730e4235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexture.html#ad4a23c32bd173e0fe124a77e730e4235">renderCentered</a> (int x, int y)</td></tr>
+<tr class="memdesc:ad4a23c32bd173e0fe124a77e730e4235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовывает отценотованную текстуру по X и Y.  <br /></td></tr>
+<tr class="separator:ad4a23c32bd173e0fe124a77e730e4235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab274e2666bfac12e3ec0ce380b58ec96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexture.html#ab274e2666bfac12e3ec0ce380b58ec96">setAlphaMode</a> (Uint8 alpha)</td></tr>
+<tr class="memdesc:ab274e2666bfac12e3ec0ce380b58ec96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает прозрачность  <br /></td></tr>
+<tr class="separator:ab274e2666bfac12e3ec0ce380b58ec96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a6fd3355bc870194851514194daaab"><td class="memItemLeft" align="right" valign="top"><a id="a91a6fd3355bc870194851514194daaab" name="a91a6fd3355bc870194851514194daaab"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> ()</td></tr>
+<tr class="separator:a91a6fd3355bc870194851514194daaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e143905655b173df5994300088ce35"><td class="memItemLeft" align="right" valign="top"><a id="a80e143905655b173df5994300088ce35" name="a80e143905655b173df5994300088ce35"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> ()</td></tr>
+<tr class="separator:a80e143905655b173df5994300088ce35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Методы</h2>
+<a id="a7577e82b287f14db49283185507fd647" name="a7577e82b287f14db49283185507fd647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7577e82b287f14db49283185507fd647">&#9670;&#160;</a></span>loadFromImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Texture::loadFromImage </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт текстуры из изображения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>путь к изображению </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a8b06a1fcaa471230d3df936be13b9142" name="a8b06a1fcaa471230d3df936be13b9142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b06a1fcaa471230d3df936be13b9142">&#9670;&#160;</a></span>loadFromText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Texture::loadFromText </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>text_color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт текстуру из строки и определённым цветом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>текст </td></tr>
+    <tr><td class="paramname">font</td><td>шрифт </td></tr>
+    <tr><td class="paramname">text_color</td><td>цевет </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a2fce38d162049942280eb1fee9292063" name="a2fce38d162049942280eb1fee9292063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fce38d162049942280eb1fee9292063">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texture::render </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect *&#160;</td>
+          <td class="paramname"><em>clip</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отрисовывает текстуру в верхнем левом углу в X и Y. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">clip</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4a23c32bd173e0fe124a77e730e4235" name="ad4a23c32bd173e0fe124a77e730e4235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a23c32bd173e0fe124a77e730e4235">&#9670;&#160;</a></span>renderCentered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texture::renderCentered </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отрисовывает отценотованную текстуру по X и Y. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab274e2666bfac12e3ec0ce380b58ec96" name="ab274e2666bfac12e3ec0ce380b58ec96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab274e2666bfac12e3ec0ce380b58ec96">&#9670;&#160;</a></span>setAlphaMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Texture::setAlphaMode </td>
+          <td>(</td>
+          <td class="paramtype">Uint8&#160;</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает прозрачность </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alpha</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="texture_8hpp_source.html">texture.hpp</a></li>
+<li>texture.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

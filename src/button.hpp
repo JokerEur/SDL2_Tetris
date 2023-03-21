@@ -6,7 +6,6 @@
 #include "texture.hpp"
 
 
-// Represents a standard button with a texture and a certain position that can be selected. If selected, the callback function can be called
 class Button
 {
 public:

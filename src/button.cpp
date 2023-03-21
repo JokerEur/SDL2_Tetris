@@ -24,7 +24,10 @@ Button::~Button ()
     texture->free();
 }
 
-// Draws the button on the screen
+/**
+ * @brief Рисует кнопку на экране
+ * 
+ */
 void Button::draw ()
 {
     texture->render(position_x, position_y);

@@ -1,0 +1,128 @@
+\hypertarget{classTexture}{}\doxysection{Класс Texture}
+\label{classTexture}\index{Texture@{Texture}}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTexture_a46d06aec832e5a954f1c8ca957c2c6e5}\label{classTexture_a46d06aec832e5a954f1c8ca957c2c6e5}} 
+void {\bfseries free} ()
+\item 
+bool \mbox{\hyperlink{classTexture_a7577e82b287f14db49283185507fd647}{load\+From\+Image}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Создаёт текстуры из изображения \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTexture_a8b06a1fcaa471230d3df936be13b9142}{load\+From\+Text}} (std\+::string text, TTF\+\_\+\+Font $\ast$font, SDL\+\_\+\+Color text\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Создаёт текстуру из строки и определённым цветом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_a2fce38d162049942280eb1fee9292063}{render}} (int x, int y, SDL\+\_\+\+Rect $\ast$clip=nullptr)
+\begin{DoxyCompactList}\small\item\em Отрисовывает текстуру в верхнем левом углу в X и Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_ad4a23c32bd173e0fe124a77e730e4235}{render\+Centered}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Отрисовывает отценотованную текстуру по X и Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_ab274e2666bfac12e3ec0ce380b58ec96}{set\+Alpha\+Mode}} (Uint8 alpha)
+\begin{DoxyCompactList}\small\item\em Устанавливает прозрачность \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTexture_a91a6fd3355bc870194851514194daaab}\label{classTexture_a91a6fd3355bc870194851514194daaab}} 
+int {\bfseries get\+Width} ()
+\item 
+\mbox{\Hypertarget{classTexture_a80e143905655b173df5994300088ce35}\label{classTexture_a80e143905655b173df5994300088ce35}} 
+int {\bfseries get\+Height} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classTexture_a7577e82b287f14db49283185507fd647}\label{classTexture_a7577e82b287f14db49283185507fd647}} 
+\index{Texture@{Texture}!loadFromImage@{loadFromImage}}
+\index{loadFromImage@{loadFromImage}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{loadFromImage()}{loadFromImage()}}
+{\footnotesize\ttfamily bool Texture\+::load\+From\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Создаёт текстуры из изображения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em path} & путь к изображению \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTexture_a8b06a1fcaa471230d3df936be13b9142}\label{classTexture_a8b06a1fcaa471230d3df936be13b9142}} 
+\index{Texture@{Texture}!loadFromText@{loadFromText}}
+\index{loadFromText@{loadFromText}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{loadFromText()}{loadFromText()}}
+{\footnotesize\ttfamily bool Texture\+::load\+From\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{TTF\+\_\+\+Font $\ast$}]{font,  }\item[{SDL\+\_\+\+Color}]{text\+\_\+color }\end{DoxyParamCaption})}
+
+
+
+Создаёт текстуру из строки и определённым цветом 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & текст \\
+\hline
+{\em font} & шрифт \\
+\hline
+{\em text\+\_\+color} & цевет \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTexture_a2fce38d162049942280eb1fee9292063}\label{classTexture_a2fce38d162049942280eb1fee9292063}} 
+\index{Texture@{Texture}!render@{render}}
+\index{render@{render}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Texture\+::render (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{SDL\+\_\+\+Rect $\ast$}]{clip = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Отрисовывает текстуру в верхнем левом углу в X и Y. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em clip} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTexture_ad4a23c32bd173e0fe124a77e730e4235}\label{classTexture_ad4a23c32bd173e0fe124a77e730e4235}} 
+\index{Texture@{Texture}!renderCentered@{renderCentered}}
+\index{renderCentered@{renderCentered}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{renderCentered()}{renderCentered()}}
+{\footnotesize\ttfamily void Texture\+::render\+Centered (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Отрисовывает отценотованную текстуру по X и Y. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTexture_ab274e2666bfac12e3ec0ce380b58ec96}\label{classTexture_ab274e2666bfac12e3ec0ce380b58ec96}} 
+\index{Texture@{Texture}!setAlphaMode@{setAlphaMode}}
+\index{setAlphaMode@{setAlphaMode}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{setAlphaMode()}{setAlphaMode()}}
+{\footnotesize\ttfamily void Texture\+::set\+Alpha\+Mode (\begin{DoxyParamCaption}\item[{Uint8}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Устанавливает прозрачность 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+texture.\+hpp\item 
+texture.\+cpp\end{DoxyCompactItemize}
